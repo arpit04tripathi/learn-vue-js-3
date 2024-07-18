@@ -4,6 +4,7 @@ Below are the steps to setup and create new repo
 
 - [Setup](#setup)
 - [Initialize this repo](#initialize-this-repo)
+- [Add bootstrap 5](#add-bootstrap-5)
 - [Deploy vue.js app on github pages](#deploy-vuejs-app-on-github-pages)
   - [Deployment using gh-pages](#deployment-using-gh-pages)
 
@@ -38,6 +39,46 @@ nvm use                     # user version from .nvmrc
   - `npm init vue@latest` OR
   - `npm init vite@latest`, and then select `vue`.
 
+# Add bootstrap 5
+
+- install dependencies
+
+```sh
+npm i bootstrap @popperjs/core bootstrap-icons
+npm i sass --save-dev
+./node_modules/.bin/sass --version
+```
+
+- `assets/scss/styles.scss` : import
+
+```scss
+// Import Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+// Import Bootstrap Icons w/ custom path to fonts folder
+$bootstrap-icons-font-dir: 'bootstrap-icons/font/fonts';
+@import 'bootstrap-icons/font/bootstrap-icons';
+
+// Custom styles
+body {
+  padding: 1.5rem;
+  margin: 1rem;
+  border: solid red 1px;
+}
+```
+
+- `main.css` : import `styles.scss` at the top of file
+
+```js
+@import './scss/styles.scss';
+```
+
+- `main.js` : imports bootstrap js bundle after `main.css` import
+
+```js
+// import bootstrap js
+import 'bootstrap/dist/js/bootstrap.bundle'
+```
 
 # Deploy vue.js app on github pages
 
