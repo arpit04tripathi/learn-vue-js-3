@@ -12,6 +12,7 @@ This template should help get you started developing with Vue 3 in Vite.
     - [Compile and Hot-Reload for Development](#compile-and-hot-reload-for-development)
     - [Lint with ESLint](#lint-with-eslint)
     - [Compile and Minify for Production](#compile-and-minify-for-production)
+- [Deploy to gh-pages](#deploy-to-gh-pages)
 - [Additional Docs](#additional-docs)
 
 # Recommended IDE Setup
@@ -68,6 +69,12 @@ npm run format
 
 ```sh
 npm run build
+```
+
+# Deploy to gh-pages
+
+```sh
+npm run deploy
 ```
 
 # Additional Docs
