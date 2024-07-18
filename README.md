@@ -45,7 +45,7 @@ npm install
 
 ```sh
  git fetch --all -p; git pull; git status;
- git merge origin/main
+ git merge origin/main;
  git push;
 ```
 
