@@ -4,6 +4,8 @@ Below are the steps to setup and create new repo
 
 - [Setup](#setup)
 - [Initialize this repo](#initialize-this-repo)
+- [Deploy vue.js app on github pages](#deploy-vuejs-app-on-github-pages)
+  - [Deployment using gh-pages](#deployment-using-gh-pages)
 
 
 # Initialize this repo
@@ -35,3 +37,32 @@ nvm use                     # user version from .nvmrc
   - `npm create vue@latest` OR
   - `npm init vue@latest` OR
   - `npm init vite@latest`, and then select `vue`.
+
+
+# Deploy vue.js app on github pages
+
+For this repo we use `gh-pages` branch to host on github pages.
+
+we use gh-pages library to push changes to branch.
+
+## Deployment using gh-pages
+
+- `vite.config.ts` - add attribute base for path to repository.
+- `package.json`
+  - add `gh-pages` dependency and
+  - `deploy` script.
+
+```sh
+# vite.config.ts
+base: "/learn-vue-js/",
+
+# install command to add as dev dependencies
+npm i gh-pages --save-dev
+./node_modules/.bin/gh-pages --version
+
+# package.json
+"deploy": "npm run build && gh-pages -d dist"
+```
+
+- Run `npm run deploy` from terminal, this creates a dist folder and commits it to branch gh-pages on github.
+- gh pages deploy from branch `gh-pages`.
