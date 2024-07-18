@@ -49,7 +49,7 @@ npm i sass --save-dev
 ./node_modules/.bin/sass --version
 ```
 
-- `assets/scss/styles.scss` : import
+- `assets/scss/styles.scss` : create this file and import bootstrap css as below
 
 ```scss
 // Import Bootstrap
